@@ -6,7 +6,7 @@ pipeline {
     stages {
     	stage('CheckOut Code'){
          	steps{
-            	checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Derek-G/FSD2020_eMart/eMart-Back']]])
+            	checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Derek-G/FSD2020_eMart']]])
             }
         }
         stage('Maven Build'){
